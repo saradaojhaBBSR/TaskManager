@@ -18,10 +18,37 @@
   <div class="collapse navbar-collapse" id="mynav">
     <ul class="navbar-nav me-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Dashboard</a>
+        <a class="nav-link" routerLink="dashboard">Dashboard</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" routerLink="about">About</a>
+      </li>
+      <!-- Dropdown menu item -->
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="menuDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Menu
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+          <li>
+            <a class="dropdown-item" routerLink="profile">Profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="settings">Settings</a>
+          </li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="logout">Logout</a>
+          </li>
+        </ul>
       </li>
     </ul>
 
@@ -39,6 +66,6 @@
 </nav>
 
 <div class="container-fluid mt-4">
-  <h1>Welcome to Angular</h1>
-  <h2>Hello</h2>
+  <router-outlet></router-outlet>
 </div>
+
